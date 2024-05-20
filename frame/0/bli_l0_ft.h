@@ -108,6 +108,19 @@ typedef void (*PASTECH2(ch,opname,tsuf)) \
 INSERT_GENTDEF( sqrtsc )
 INSERT_GENTDEF( sqrtrsc )
 
+// sqrtrsc
+
+#undef  GENTDEF
+#define GENTDEF( ctype, ch, opname, tsuf ) \
+\
+typedef void (*PASTECH2(ch,opname,tsuf)) \
+     ( \
+       const ctype* chi, \
+             ctype* psi  \
+     );
+
+INSERT_GENTDEF( sqrtrsc )
+
 // getsc
 
 #undef  GENTDEF
